@@ -5,16 +5,45 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="30dp" >
+    android:layout_margin="30dp"
+    tools:context=".openfoodfact">
+
+    <TextView
+        android:id="@+id/firstline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1. Snap a picture with barcode"/>
+
+    <Button
+        android:id="@+id/btn_snap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_roundcorner"
+        android:text="snap now"
+        android:onClick="ScanButton"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/white"
+        android:textSize="15dp"
+        android:layout_below="@+id/firstline" />
+
+    <TextView
+        android:id="@+id/secondline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2. Nutrition fact"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/btn_snap"/>
 
     <TextView
         android:id="@+id/snap_food"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="FoodName"
+        android:text=""
         android:textStyle="bold"
         android:textSize="30dp"
-        android:layout_marginTop="30dp"/>
+        android:layout_below="@+id/secondline"
+        android:layout_marginTop="10dp"/>
 
     <LinearLayout
         android:id="@+id/layout1_1"

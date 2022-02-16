@@ -23,9 +23,6 @@ import com.google.zxing.integration.android.IntentResult;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONObject;
-import org.w3c.dom.Text;
-
-import java.lang.reflect.Array;
 
 public class openfoodfact extends AppCompatActivity {
 
@@ -63,13 +60,13 @@ public class openfoodfact extends AppCompatActivity {
                 ingred_textView.setText("Not found");
             }
             else{
-                //Intent intent = new Intent(this, .class);
-                //startActivity(intent);
                 jsonParse(intentResult.getContents());
             }
         }
         super.onActivityResult(requestCode, resultCode, data);
     }
+
+
 
     private void jsonParse(String numeroean){
         String url = "https://world.openfoodfacts.org/api/v0/product/"+numeroean+".json";

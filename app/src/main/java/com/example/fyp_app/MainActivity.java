@@ -9,6 +9,7 @@ import android.widget.Spinner;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.example.fyp_app.R;
+import com.google.zxing.integration.android.IntentIntegrator;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,8 +18,38 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+
+import android.Manifest;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
+import com.google.zxing.integration.android.IntentIntegrator;
+import com.google.zxing.integration.android.IntentResult;
+import com.squareup.picasso.Picasso;
+
+import org.json.JSONObject;
+
+
 public class MainActivity extends AppCompatActivity {
-ImageView yogaArms;
+    ImageView yogaArms;
+    Button btn_checkit;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         ActionBar actionBar = getSupportActionBar();
@@ -41,13 +72,14 @@ ImageView yogaArms;
                 startActivity(new Intent(getApplicationContext(),EntryChoiceActivity.class));
             }
         });
+
+        btn_checkit = (Button) findViewById(R.id.btn_checkit);
+        btn_checkit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),openfoodfact.class));
+            }
+        });
+
     }
-
-
-    //Use text as a button
-    /*public void CreateAcc(View v) {
-        //
-    }
-     */
-
 }

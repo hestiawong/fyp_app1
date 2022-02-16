@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:layout_margin="30dp"
     android:id="@+id/text_dashboard"
-    tools:context=".openfoodfact">
+    tools:context=".ui.dashboard.DashboardFragment">
 
     <TextView
         android:id="@+id/header1"
@@ -248,15 +248,15 @@
         android:layout_below="@+id/text234" />
 
     <Button
-        android:id="@+id/btn_snap"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/button_roundcorner"
-        android:text="Snap now"
-        android:textColor="@android:color/white"
-        android:textSize="15dp"
-        android:layout_below="@+id/text1234" />
+            android:id="@+id/btn_checkit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/button_roundcorner"
+            android:text="Check it"
+            android:textColor="@android:color/white"
+            android:textSize="15dp"
+            android:layout_below="@+id/text1234"/>
 
 </RelativeLayout>
